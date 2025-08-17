@@ -52,7 +52,7 @@ pub struct MakeOffer<'info> {
 }
 
 pub fn send_offered_token_to_vault(ctx: &Context<MakeOffer>, token_a_offered_amount: u64) -> Result<()> {
-    transfer_tokens(
+    let _ = transfer_tokens(
         &ctx.accounts.maker_token_account_a, 
     &ctx.accounts.vault, 
         &token_a_offered_amount, 
